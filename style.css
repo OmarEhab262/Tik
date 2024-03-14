@@ -1,0 +1,187 @@
+@font-face {
+  font-family: "Tajawal";
+  src: url("./font/Tajawal-Medium.ttf");
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Tajawal", sans-serif;
+}
+
+.container {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.ticket {
+  width: 540px;
+  height: 190px;
+  background: #041461;
+  position: relative;
+  display: flex;
+}
+
+.ticket::before,
+.ticket::after {
+  content: "";
+  position: absolute;
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  background-color: white;
+}
+
+.ticket::before {
+  top: -8px;
+  left: 425px; /* Adjust as necessary */
+}
+
+.ticket::after {
+  bottom: -8px;
+  left: 425px; /* Adjust as necessary */
+}
+
+.left {
+  /* width: 80%; */
+  width: 432px;
+  height: 190px;
+  background-image: url("./img/party3.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  border-right: dashed 2px white;
+}
+
+.contentLeft {
+  position: absolute;
+  left: 29px;
+  bottom: 15px;
+  display: flex;
+  align-items: center;
+  gap: 89px;
+}
+
+.titleLeft {
+  width: 144px;
+  height: 140px;
+  color: #eff0fe;
+  font-size: 32px;
+  font-weight: 500;
+  line-height: 38px;
+}
+
+.ifnoLeft {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 30px;
+}
+
+.ifnoLeft > * {
+  color: #eff0fe;
+  text-align: center;
+  font-size: 10px;
+  font-weight: 500;
+  line-height: normal;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 5px;
+}
+
+.right {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  position: relative;
+}
+
+.right .top {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 93px;
+  margin-left: 5px;
+}
+
+.right .top .text {
+  display: flex;
+  align-items: center;
+}
+
+.right .top .text .one,
+.right .top .text .two,
+.right .top .last .one,
+.right .top .last .two {
+  transform: rotate(-90deg);
+  color: #eff0fe;
+  font-size: 10px;
+  font-weight: 500;
+}
+.right .top .last {
+  display: flex;
+}
+.right .top .text .two {
+  width: 30px;
+  font-family: Tajawal;
+  font-size: 14px;
+}
+
+.img {
+  width: 40px;
+  height: 40px;
+  display: flex;
+  padding-left: 5px;
+}
+
+.img img {
+  width: 40px;
+  height: 40px;
+}
+
+.right .mid {
+  width: 20px;
+  height: 160px;
+  display: flex;
+}
+
+.right .mid img {
+  width: 20px;
+  height: 160px;
+}
+
+.right .bott {
+  color: white;
+  position: absolute;
+  transform: rotate(-90deg);
+  font-size: 8px;
+  font-weight: 500;
+  line-height: normal;
+  display: flex;
+  width: 157px;
+  justify-content: space-between;
+  left: 10px;
+}
+/* Your existing CSS */
+
+/* Media query for phones */
+@media only screen and (max-width: 600px) {
+  .ticket {
+    transform: rotate(90deg);
+  }
+  .titleLeft {
+    width: 144px;
+    height: 140px;
+    color: #eff0fe;
+    font-size: 22px;
+    font-weight: 500;
+    line-height: 38px;
+  }
+  .right {
+    width: 100px;
+  }
+}
