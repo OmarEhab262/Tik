@@ -15,6 +15,8 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
+  overflow-x: scroll;
+  min-width: 600px;
 }
 
 .ticket {
@@ -165,23 +167,4 @@ body {
   width: 157px;
   justify-content: space-between;
   left: 10px;
-}
-/* Your existing CSS */
-
-/* Media query for phones */
-@media only screen and (max-width: 600px) {
-  .ticket {
-    transform: rotate(90deg);
-  }
-  .titleLeft {
-    width: 144px;
-    height: 140px;
-    color: #eff0fe;
-    font-size: 22px;
-    font-weight: 500;
-    line-height: 38px;
-  }
-  .right {
-    width: 100px;
-  }
 }
